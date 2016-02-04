@@ -1,28 +1,12 @@
 html {
-	font-family: $helvetica;
+	font-family: $impact;
 }
 
-.border {
-	border: 1px solid #ccc;
-		p{
-		color: red;
+.btn {
+	@include btn($red);
+		span {
+			color: $white;
 		}
 }
-
-ul {
-	@extend .border;
-}
-
-a{
-	text-decoration: none;
-	&:hover{
-	text-decoration: underline;
-	}
-}
-
-.primary-btn {
-	@include button($blue);
-}
-
 
 

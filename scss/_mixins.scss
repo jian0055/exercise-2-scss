@@ -1,9 +1,50 @@
-@mixin button($bg-color) {
-	display: inline-block;
-	margin: 1em;
-	padding: .5em 1em;
-	border-radius: 3px;
-	text-decoration: none;
-	color: #fff;
+@mixin btn($bg-color) {
 	background: $bg-color;
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 15em;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  width: 20em;
+ }
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: $dark-red;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -3em;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 1em;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.icon-logo {
+  text-align: center;
+  color: $white;
 }
